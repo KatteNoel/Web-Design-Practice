@@ -1,0 +1,117 @@
+:root{
+    --stagger-delay: 100ms;
+    --red: #e03939;
+}
+
+body{
+    background-color: #343434;
+}
+
+#header{
+    text-align: center;
+    color: white;
+}
+
+#container{
+    background-color: var(--red);
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: hidden;
+
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
+}
+
+#image{
+    height: 100px;
+    width: 100px;
+}
+
+#logo{
+    height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.basic-grid{
+    display:grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+}
+
+p{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: white;
+    font-size:large;
+}
+
+#paragraph{
+    text-align: center;
+    text-overflow: ellipsis;
+    margin-top: 2.5rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+
+@keyframes cardEntrance{
+    from{
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card:nth-child(1){
+    animation-delay: calc(1 * var(--stagger-delay));
+}
+
+.card:nth-child(2)
+{
+    animation-delay: calc(2 * var(--stagger-delay));
+}
+
+.card:nth-child(3)
+{
+    animation-delay: calc(3 * var(--stagger-delay));
+}
+
+.card:nth-child(4)
+{
+    animation-delay: calc(4 * var(--stagger-delay));
+}
+
+.card:nth-child(5)
+{
+    animation-delay: calc(5 * var(--stagger-delay));
+}
+
+.card:nth-child(6)
+{
+    animation-delay: calc(6 * var(--stagger-delay));
+}
+
+.card:nth-child(7)
+{
+    animation-delay: calc(7 * var(--stagger-delay));
+}
+
+.card:last-child
+{
+    animation-delay: calc(8 * var(--stagger-delay));
+}
+
+#footer{
+    text-align:right;
+}
